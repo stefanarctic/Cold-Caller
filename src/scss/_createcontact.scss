@@ -1,0 +1,32 @@
+
+.App {
+    .create-contact {
+        
+        .floating-plus {
+            all: unset;
+            position: fixed;
+            bottom: 100px;
+            right: 50px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            font-size: 50px;
+            border: none;
+            cursor: pointer;
+            z-index: 99;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: rgb(29, 44, 59) 5px 20px 30px -10px;
+
+            &:hover {
+                background-color: #006adb;
+                box-shadow: rgb(26, 40, 53) 5px 20px 30px -10px;
+            }
+        }
+    }
+}

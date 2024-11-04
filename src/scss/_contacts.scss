@@ -1,0 +1,59 @@
+
+.App {
+    .contacts {
+        height: 75vh;
+        margin-right: 20px;
+        margin-left: 20px;
+        background-color: #4b4b4b;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.466) 0px 3px 8px;
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-around;
+            gap: 20px;
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #646464;
+            }
+
+            p {
+                flex: 1;
+
+                &#phone-number {
+                    cursor: pointer;
+                }
+
+                &#website {
+                    cursor: pointer;
+
+                    a {
+                        all: unset;
+
+                        &:hover {
+                            color: rgb(39, 62, 196);
+                        }
+                    }
+                }
+
+                &#called {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                // &:nth-child(4) {
+                //     display: flex;
+                //     justify-content: center;
+                // }
+            }
+        }
+    }
+}

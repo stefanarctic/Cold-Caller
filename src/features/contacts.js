@@ -18,7 +18,7 @@ export const getContacts = async () => {
     const docsSnapshot = await getDocs(contactsCollection);
     const contacts = docsSnapshot.docs.map(doc => {
         const data = doc.data();
-        data.date_assigned = data.date_assigned.toDate();
+        data.date_assigned = data.date_assigned.toDate().getTime();
         data.id = doc.id;
         return data;
     });

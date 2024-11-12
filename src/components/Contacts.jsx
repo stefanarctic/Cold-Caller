@@ -26,7 +26,7 @@ const Contacts = () => {
                         <p id="phone-number"><a href={`https://call.ctrlq.org/+4${contact.phone_number.replace(' ', '%20')}`} target="_blank">{contact.phone_number}</a></p>
                         <p id="website"><a href={contact.website} target="_blank">{contact.website}</a></p>
                         <p id="called">{contact.called ? '✅' : '❌'}</p>
-                        <p id="date">{`${contact.date_assigned.toLocaleString('default', {day: '2-digit'})} ${contact.date_assigned.toLocaleString('default', {month: 'long'})}`}</p>
+                        <p id="date">{`${new Date(contact.date_assigned).toLocaleString('default', {day: '2-digit'})} ${new Date(contact.date_assigned).toLocaleString('default', {month: 'long'})}`}</p>
                     </div>
                 ))
             }
